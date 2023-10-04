@@ -35,12 +35,10 @@ public class MyGUI {
 		jframeWindow = new JFrame();
 		jframeWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		// construct a panel container to store buttons, etc.
 		panel = new JPanel(new GridLayout(3, 0)); // 3 ROWS NO COLUMNS
 		panel.setPreferredSize(new Dimension(500, 150));
 		panel.setBackground(Color.DARK_GRAY);
 
-		// build buttons, etc. and add them to the panel
 		inputBtn = new JButton("Specify Input Text File");
 		outputBtn = new JButton("Specify Output Text File");
 		computeBtn = new JButton("Perform task");
@@ -48,10 +46,8 @@ public class MyGUI {
 		panel.add(outputBtn);
 		panel.add(computeBtn);
 
-		// add panel to the application window
 		jframeWindow.add(panel);
 
-		// TASK 5: MAKE THE APPLICATION WINDOW VISIBLE TO THE USER
 		jframeWindow.pack();
 		jframeWindow.setVisible(true);
 	}
@@ -76,7 +72,6 @@ public class MyGUI {
 	}
 
 	public static void requestSaveFile() {
-		// parent component of the dialog
 		JFrame parentFrame = new JFrame();
 
 		JFileChooser fileChooser = new JFileChooser();
